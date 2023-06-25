@@ -1,6 +1,6 @@
-//              http://localhost:8080/usuarios/saveUser
-let baserUrl = "http://localhost:8080";
-// Esta de abajo se usara para apuntar a la URL remoto una vez subido el proyecto
-//let baserUrl = "http://localhost:8080";
+// Bariable global base URL para las peticiones local...
+let baserUrl = "http://localhost:8191";
 
+// Bariable global base URL para las peticiones Remoto para la fase de test...
+// let baserUrl = "http://mrjob22.herokuapp.com"; --> mrjob22.herokuapp.com/student/getAll
 export default baserUrl;

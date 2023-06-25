@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { UserService } from 'src/app/services/user.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-signup',
@@ -17,7 +19,7 @@ export class SignupComponent implements OnInit {
     telefono : ''
   }
 
-  constructor(private userService:UserService) { }
+  constructor(private userService:UserService, private snack:MatSnackBar) { }
 
   ngOnInit(): void {
   }
@@ -36,17 +38,27 @@ EN LA PETICION SOY UN OBSERVADOR ME TENGO QUE SUSCRIBIR PARA PODER OBTENER ESOS 
 
   console.log(this.user);
   if(this.user.username == '' || this.user.username == null){
-    alert('El nombre de usuario es Requerido...!');
+    //alert('El nombre de usuario es Requerido...!');
+    this.snack.open("El nombre de usuario es requerido...!", "Aceptar", {
+      duration : 3000,
+      verticalPosition : 'top',
+      horizontalPosition : 'right'
+    });
     return;
   }
 
   this.userService.registrarUsuario(this.user).subscribe(
     (data) => {
       console.log(data);
-      alert('Usuario guardado con Exito...!');
+      //alert('Usuario guardado con Exito...!');
+      Swal.fire('Usuario guardado', 'Usuario guardado con Exito en el sistema...!', 'success');
     },(error) => {
       console.log(error);
-      alert('Ha ocurrido un error en el sistema...!');
+      //alert('Ha ocurrido un error en el sistema...!');
+       this.snack.open("A ocurrido un error en el sistema...!", "Aceptar", {
+        duration : 3000,
+      });
+      return;
     }    
   )
  }

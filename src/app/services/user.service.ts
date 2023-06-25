@@ -11,7 +11,7 @@ export class UserService {
 
 // http://localhost:8080/usuarios/saveUser
 public registrarUsuario(user: any){
-  return this.httpClient.post(`${baserUrl}/usuarios/saveUser`, user);
+  return this.httpClient.post(`${baserUrl}/usuarios/`, user);
 }
 
 
