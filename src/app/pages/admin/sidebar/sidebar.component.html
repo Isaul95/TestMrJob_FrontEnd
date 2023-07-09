@@ -1,33 +1,34 @@
 <mat-card>
     <mat-action-list>
         <div mat-subheader>Menu</div>
-        <button routerLink="/admin" mat-list-item>
+        <!--bu0tton routerLink="/admin" mat-list-item>
             <mat-icon mat-list-icon>home</mat-icon>Inicio
-        </button>
+        </button-->
 
         <button mat-list-item routerLink="/admin/profile">
-            <mat-icon mat-list-icon>account_circle</mat-icon>Perfil
+            <mat-icon mat-list-icon>account_circle</mat-icon>Mi información
         </button>
 
-        <button mat-list-item routerLink="/admin/categorias">
-            <mat-icon mat-list-icon>list</mat-icon>Categorías
-        </button>
-
-        <button mat-list-item routerLink="/admin/add-categoria">
-            <mat-icon mat-list-icon>add_circle_outline</mat-icon>Agregar categoría 
+        <button mat-list-item routerLink="/admin/servicios">
+            <mat-icon mat-list-icon>design_services</mat-icon>Mis servicios
         </button>
 
         <button mat-list-item routerLink="/admin/examenes">
-            <mat-icon mat-list-icon>quiz</mat-icon>Cuestionarios
+          <mat-icon mat-list-icon>work_history</mat-icon>Mis asignaciones
+        </button>
+
+        <button mat-list-item routerLink="/admin/add-categoria">
+            <mat-icon mat-list-icon>notifications_active</mat-icon>Notificaciones
         </button>
 
         <button mat-list-item routerLink="/admin/add-examen">
-            <mat-icon mat-list-icon>add</mat-icon>Agregar cuestionario 
+            <mat-icon mat-list-icon>error</mat-icon>Ayuda
         </button>
 
-        <button mat-list-item routerLink="/admin/profile">
+
+        <!--button mat-list-item routerLink="/admin/profile">
             <mat-icon mat-list-icon>logout</mat-icon>Salir
-        </button>
+        </button-->
 
     </mat-action-list>
 </mat-card>

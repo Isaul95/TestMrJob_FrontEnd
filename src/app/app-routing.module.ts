@@ -16,6 +16,7 @@ import { AddExamenComponent } from './pages/admin/add-examen/add-examen.componen
 import { ActualizarExamenComponent } from './pages/admin/actualizar-examen/actualizar-examen.component';
 import { ViewExamenPreguntasComponent } from './pages/admin/view-examen-preguntas/view-examen-preguntas.component';
 import { AddPreguntaComponent } from './pages/admin/add-pregunta/add-pregunta.component';
+import { SignupJobComponent } from './pages/signup-job/signup-job.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,11 @@ const routes: Routes = [
   {
     path:'signup',
     component: SignupComponent,
+    pathMatch: 'full'
+  },
+  {
+    path:'signup-job',
+    component: SignupJobComponent,
     pathMatch: 'full'
   },
   {
@@ -41,31 +47,31 @@ const routes: Routes = [
     children:[
       {
         path:'profile',
-        component: ProfileComponent        
+        component: ProfileComponent
       },
       {
         path:'',
-        component: WelcomeComponent        
+        component: WelcomeComponent
       },
       {
-        path:'categorias',
-        component: ViewCategoriasComponent        
+        path:'servicios',
+        component: ViewCategoriasComponent
       },
       {
         path:'add-categoria',
-        component: AddCategoriasComponent        
+        component: AddCategoriasComponent
       },
       {
         path:'examenes',
-        component: ViewExamenesComponent        
+        component: ViewExamenesComponent
       },
       {
         path:'add-examen',
-        component: AddExamenComponent        
+        component: AddExamenComponent
       },
       {
         path:'examen/:examenId',
-        component: ActualizarExamenComponent        
+        component: ActualizarExamenComponent
       },
       {
         path:'ver-preguntas/:examenId/:titulo',

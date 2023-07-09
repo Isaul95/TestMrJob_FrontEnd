@@ -1,26 +1,21 @@
 <mat-toolbar color="primary">
-    <a [routerLink] = "'/'" 
+    <a [routerLink] = "'/'"
     mat-icon-button class="example-icon" arial-label="Example icon-button with menu icon">
-    <mat-icon>menu_books</mat-icon>
+    <mat-icon mat-list-icon>
+      <img src="../../../assets/categoria.png" width="20" alt="20">
+  </mat-icon>
 </a>
 
-<span>Portal de exámenes</span>
+<span>Log de Mr job</span>
 <span class="example-spacer"></span>
 <a *ngIf = "!isLoggedIn"
-    [routerLink] = "'/login'" mat-icon-button class="example-icon favorite-icon" arial-label="Example icon-button with heart icon">    
+    [routerLink] = "'/login'" mat-icon-button class="example-icon favorite-icon" arial-label="Example icon-button with heart icon">
     Iniciar sesión
 </a>
 
 <a *ngIf = "!isLoggedIn"
-    [routerLink] = "'/signup'" mat-icon-button class="example-icon favorite-icon mr20 ml70" arial-label="Example icon-button with heart icon">    
+    [routerLink] = "'/signup'" mat-icon-button class="example-icon favorite-icon mr20 ml70" arial-label="Example icon-button with heart icon">
     Registar
-</a>
-
-<a *ngIf = "isLoggedIn"
-    (click) = "logout()"
-    style="margin-right: 50px;"
-    mat-icon-button class="example-icon favorite-icon" arial-label="Example icon-button with heart icon">    
-    Cerrar sesión
 </a>
 
 <button
@@ -31,5 +26,13 @@
     routerLink="/admin/profile">
     {{ user.username }}
 </button>
+
+
+<a *ngIf = "isLoggedIn"
+    (click) = "logout()"
+    style="margin-right: 50px;"
+    mat-icon-button class="example-icon favorite-icon" arial-label="Example icon-button with heart icon">
+    Cerrar sesión
+</a>
 
 </mat-toolbar>

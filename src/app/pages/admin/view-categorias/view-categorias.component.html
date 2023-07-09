@@ -1,13 +1,13 @@
 <mat-card>
     <mat-list>
-        <div mat-subheader>
-            Todas las categorías
-        </div>
+        <!--div mat-subheader-->
+            <h1><strong>Mis servicios</strong></h1>
+        <!--/div-->
         <mat-list-item *ngFor = "let c of categorias">
             <mat-icon mat-list-icon>
                 <img src="../../../assets/categoria.png" width="30" alt="30">
             </mat-icon>
-            
+
             <div mat-line>{{ c.titulo }}</div>
             <div mat-line>{{ c.descripcion }}</div>
 
@@ -16,7 +16,9 @@
     </mat-list>
 
     <div class="container text-center mt20">
-        <button routerLink="/admin/add-categoria" mat-raised-button color = "primary">Agregar categoría</button>
+        <button routerLink="/admin/add-categoria" mat-raised-button color = "primary">
+          <mat-icon>add</mat-icon> Agregar servicio
+        </button>
 
     </div>
 </mat-card>

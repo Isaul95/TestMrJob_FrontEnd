@@ -39,6 +39,7 @@ import { AddExamenComponent } from './pages/admin/add-examen/add-examen.componen
 import { ActualizarExamenComponent } from './pages/admin/actualizar-examen/actualizar-examen.component';
 import { ViewExamenPreguntasComponent } from './pages/admin/view-examen-preguntas/view-examen-preguntas.component';
 import { AddPreguntaComponent } from './pages/admin/add-pregunta/add-pregunta.component';
+import { SignupJobComponent } from './pages/signup-job/signup-job.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { AddPreguntaComponent } from './pages/admin/add-pregunta/add-pregunta.co
     AddExamenComponent,
     ActualizarExamenComponent,
     ViewExamenPreguntasComponent,
-    AddPreguntaComponent
+    AddPreguntaComponent,
+    SignupJobComponent
   ],
   imports: [
     BrowserModule,

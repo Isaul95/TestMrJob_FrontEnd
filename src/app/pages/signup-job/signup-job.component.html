@@ -1,0 +1,56 @@
+<div class = "bootstrap-wrapper">
+  <div class="container">
+      <div class="row" style = "margin-top: 20px;">
+          <div class="col-md-6 offset-md-3">
+              <div class="container text-center">
+                  <img src="../../../assets/add-user.png" width="100" alt="100">
+              </div>
+
+              <h1 class="text-center">Unirme como Job</h1>
+              <a [routerLink] = "'/signup-job'" mat-icon-button class="example-icon favorite-icon mr20 ml70" arial-label="Example icon-button with heart icon">
+                Quiero buscar un servicio
+            </a>
+
+
+              <form (ngSubmit) = "formSubmit()">
+                    <mat-form-field class="full-width" appearance="outline">
+                      <mat-label>Nombre completo:</mat-label>
+                      <input required [(ngModel)]="user.nombrecompleto" name="nombrecompleto" matInput placeholder="Ingrese su nombre completo...!">
+                  </mat-form-field>
+
+                    <mat-form-field class="full-width" appearance="outline">
+                      <mat-label>Correo electronico o número:</mat-label>
+                      <input required [(ngModel)]="user.email" name="email" type="email" matInput placeholder="Ingrese su email...!">
+                  </mat-form-field>
+
+                    <mat-form-field class="full-width"  appearance = "outline">
+                      <mat-label>Número de telefono (Opcional)</mat-label>
+                      <input [(ngModel)] = "user.telefono" name = "telefono" matInput placeholder="Digite su telefono">
+                  </mat-form-field>
+
+                    <mat-form-field class="full-width" appearance="outline">
+                      <mat-label>Contraseña:</mat-label>
+                      <input required [(ngModel)]="user.password" name="password" type="password" matInput placeholder="Ingrese su password...!">
+                  </mat-form-field>
+
+                    <mat-form-field class="full-width" appearance="outline">
+                      <mat-label>Especifia el tipo de servicio que ofreces:</mat-label>
+                      <input required [(ngModel)]="user.tipoServicioOfrece" name="tipoServicioOfrece" matInput placeholder="Ingrese sus apellidos...!">
+                  </mat-form-field>
+
+                    <mat-form-field class="full-width" appearance="outline">
+                      <mat-label>Escribe el nombre de tu negocio:</mat-label>
+                      <input required [(ngModel)]="user.nombreNegocio" name="nombreNegocio" matInput placeholder="Ingrese sus apellidos...!">
+                  </mat-form-field>
+
+
+                  <div class="container text-center">
+                      <button mat-raised-button color="primary">Registrarme</button>
+                      <button type="reset" style="margin-left: 20px;" mat-raised-button color="warn">Limpiar</button>
+                  </div>
+              </form>
+              <br><br><br>
+          </div>
+      </div>
+  </div>
+</div>

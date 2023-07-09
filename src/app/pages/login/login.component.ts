@@ -25,12 +25,12 @@ formSubmit(){
   //console.log("Here isaul....");
   if(this.loginData.username.trim() == '' || this.loginData.username.trim() == null){
       this.snack.open("El nombre de usuario es requerido...!!!", "Aceptar", {
-        duration : 3000       
+        duration : 3000
       });
   }
   if(this.loginData.password.trim() == '' || this.loginData.password.trim() == null){
     this.snack.open("La contraseña es requerido...!!!", "Aceptar", {
-      duration : 3000       
+      duration : 3000
     });
   }
 
@@ -43,14 +43,15 @@ formSubmit(){
       this.loginService.getCurrentUser().subscribe((user:any) => {
         this.loginService.setUser(user); // Esto estable en el localStorage un usuario el actual
         console.log('USER-ACTUAL->',user);
+        console.log('ROL-> ', this.loginService.getUserRol());
 
-        if(this.loginService.getUserRol() == "ADMIN"){
+        if(this.loginService.getUserRol() == "Jobers"){
           // dashboard admin
           // window.location.href = '/admin';
           this.router.navigate(['admin']);
           this.loginService.loginStatusSubjec.next(true);
 
-        }else if(this.loginService.getUserRol() == "NORMAL"){
+        }else if(this.loginService.getUserRol() == "Job"){
           // dashboard user
           // window.location.href = '/user-dashboard';
           this.router.navigate(['user-dashboard']);
@@ -64,7 +65,7 @@ formSubmit(){
     },(error) =>{
       console.log(error);
       this.snack.open("Detalles inválidos, vuelva a intentar...!!!", "Aceptar", {
-        duration : 3000       
+        duration : 3000
       });
     }
   )

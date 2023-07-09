@@ -7,18 +7,17 @@
                         <img src="../../../assets/candado.png" width="100" alt="100">
                     </div>
 
-                    <h1 class="text-center">Inicio de sesión</h1>
+                    <h1 class="text-center">Iniciar sesión</h1>
+
                     <form (ngSubmit)="formSubmit()">
                         <mat-form-field class="full-width" appearance="outline">
-                            <mat-label>Nombre de usuario::</mat-label>
-                            <input [(ngModel)] = "loginData.username" name = "username" required matInput placeholder="Ingrese su usuario...!">
-                            <mat-hint>El nombre del usuario debe ser valido</mat-hint>
+                            <mat-label>Correo electronico o número de teléfono</mat-label>
+                            <input [(ngModel)] = "loginData.username" name = "username" required matInput placeholder="Ingrese su usuario.">
                         </mat-form-field>
 
                         <mat-form-field class="full-width" appearance="outline">
-                            <mat-label>Contraseña:</mat-label>
-                            <input [(ngModel)] = "loginData.password" name = "password" required  type="password" matInput placeholder="Ingrese su password...!">                        
-                            <mat-hint>La contraseña debe ser valida</mat-hint>
+                            <mat-label>Contraseña</mat-label>
+                            <input [(ngModel)] = "loginData.password" name = "password" required  type="password" matInput placeholder="Ingrese su password.">
                         </mat-form-field>
                         <br><br>
 
@@ -26,6 +25,15 @@
                             <button mat-raised-button color="primary">Iniciar sesión</button>
                             <button type="reset" style="margin-left: 20px;" mat-raised-button color="warn">Limpiar</button>
                         </div>
+
+                        <div class="container text-center">
+                          <mat-label>¿No tienes una cuenta?
+<a [routerLink] = "'/signup'" mat-icon-button class="example-icon favorite-icon mr20 ml70" arial-label="Example icon-button with heart icon">
+    Registarme
+</a>
+</mat-label>
+                        </div>
+
                     </form>
                 </mat-card>
             </div>
